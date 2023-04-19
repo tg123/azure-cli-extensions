@@ -290,6 +290,9 @@ def _is_ipconnect_request(cmd, bastion, target_ip_address):
     if 'enableIpConnect' in bastion and bastion['enableIpConnect'] is True and target_ip_address:
         return True
 
+    if 'enableTunneling' in bastion and bastion['enableTunneling'] is True and target_ip_address:
+        return True    
+    
     return False
 
 
