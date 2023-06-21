@@ -2,10 +2,54 @@
 
 Release History
 ===============
+
 Upcoming
 ++++++
+* 'az containerapp job execution show/list': improve table output format
+* 'az containerapp create/update': --yaml support properties for api-version 2023-04-01-preview (e.g. subPath, mountOptions)
+* 'az containerapp service': add support for creation and deletion of kafka
+* 'az containerapp create': --registry-server support registry with custom port
+* Add regex to fix validation for containerapp name
+
+0.3.33
+++++++
+* 'az containerapp create': fix --registry-identity "system" with --revision-suffix
+* 'az containerapp up': fix --target-port value not being propagated when buildpack is used to build image from --source
+* Fix for 'az containerapp job create' with --yaml option to create a Container App job
+* Support 'az containerapp job secret' to manage secrets for Container App jobs
+* Support 'az containerapp job identity' to manage identity for Container App jobs
+* Fix for issue with --user-assigned identity for Container App jobs where identities were getting split incorrectly
+* Add new parameters `--mi-system-assigned` and `--mi-user-assigned` to replace the deprecated parameters `--system-assigned` and `--user-assigned` for `az containerapp job create` command
+
+0.3.32
+++++++
+* Fix for 'az containerapp job update' command when updating Container App job with a trigger configuration
+
+0.3.31
+++++++
+* Fix issue when using 'az containerapp up' to create a container app from a local source with a Dockerfile
+
+0.3.30
+++++++
+* Add 'az containerapp service' for binding a service to a container app
+* Add 'az containerapp patch' to enable the local source to cloud
+* Add 'az containerapp job' to manage Container Apps jobs
+* Split 'az containerapp env workload-profile set' into 'az containerapp env workload-profile add' and 'az containerapp env workload-profile update'
+* Add 'az containerapp env workload-profile add' to support creating a workload profile in an environment
+* Add 'az containerapp env workload-profile update' to support updating an existing workload profile in an environment
+* 'az containerapp auth update': fix excluded paths first and last character being cutoff
+* 'az containerapp update': remove the environmentId in the PATCH payload if it has not been changed
+* Upgrade api-version to 2023-04-01-preview
+
+0.3.29
+++++++
+* 'az containerapp create': support for assigning acrpull permissions to managed identity in cross-subscription; warn when ACR resourceNotFound, do not block the process
+* 'az containerapp hostname bind': fix bug where the prompt for validation method didn't take value in
+* Make --validation-method parameter case insensitive for 'az containerapp hostname bind' and 'az containerapp env certificate create'
+* 'az containerapp auth update': remove unsupported argument --enable-token-store
 * 'az containerapp update'/'az containerapp env update': fix --no-wait
 * 'az containerapp update': fix the --yaml update behavior to respect the empty array in patch-request
+* 'az containerapp create/update': add support for secret volumes yaml and --secret-volume-mount
 
 0.3.28
 ++++++

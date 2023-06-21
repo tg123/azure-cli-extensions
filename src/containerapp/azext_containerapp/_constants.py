@@ -13,9 +13,24 @@ ACR_IMAGE_SUFFIX = ".azurecr.io"
 
 LOG_ANALYTICS_RP = "Microsoft.OperationalInsights"
 CONTAINER_APPS_RP = "Microsoft.App"
+SERVICE_LINKER_RP = "Microsoft.ServiceLinker"
 
 MANAGED_CERTIFICATE_RT = "managedCertificates"
 PRIVATE_CERTIFICATE_RT = "certificates"
+
+DEV_SERVICE_LIST = ["kafka", "postgres", "redis"]
+
+DEV_KAFKA_IMAGE = 'kafka'
+DEV_KAFKA_SERVICE_TYPE = 'kafka'
+DEV_KAFKA_CONTAINER_NAME = 'kafka'
+
+DEV_POSTGRES_IMAGE = 'postgres'
+DEV_POSTGRES_SERVICE_TYPE = 'postgres'
+DEV_POSTGRES_CONTAINER_NAME = 'postgres'
+
+DEV_REDIS_IMAGE = 'redis'
+DEV_REDIS_SERVICE_TYPE = 'redis'
+DEV_REDIS_CONTAINER_NAME = 'redis'
 
 PENDING_STATUS = "Pending"
 SUCCEEDED_STATUS = "Succeeded"
